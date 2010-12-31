@@ -15,6 +15,9 @@ set expandtab
 set list listchars=tab:\ \ ,trail:·
 set smartindent
 
+set wildmode=list:longest,list:full
+set wildignore+=.git
+
 map <Leader>n :NERDTreeToggle<CR>
 
 
