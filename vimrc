@@ -19,7 +19,7 @@ set wildmode=list:longest,list:full
 set wildignore+=.git
 
 map <Leader>n :NERDTreeToggle<CR>
-
+map <Leader><Leader> :ZoomWin<CR>
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
