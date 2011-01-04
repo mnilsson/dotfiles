@@ -1,7 +1,7 @@
 if has("gui_macvim")
     set guifont=Menlo:h11
-    set guioptions-=T
 endif
 
-
+set guioptions-=T
+set guioptions-=L
 colors molokai
