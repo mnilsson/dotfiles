@@ -4,3 +4,4 @@ if has("gui_macvim")
 endif
 
 
+colors molokai
