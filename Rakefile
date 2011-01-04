@@ -12,6 +12,11 @@ task :link_vimrc do
   end
 end
 
+desc "run the installer for the vim plugin CommandT"
+task :make_command_t do
+  sh "cd dot_vim/bundle/Command-T && rake make"
+end
 task :default => [
   :link_vimrc,
 ]
+

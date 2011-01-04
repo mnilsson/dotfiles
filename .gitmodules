@@ -10,3 +10,6 @@
 [submodule "dot_vim/bundle/snipMate"]
 	path = dot_vim/bundle/snipMate
 	url = https://github.com/vim-scripts/snipMate.git
+[submodule "dot_vim/bundle/Command-T"]
+	path = dot_vim/bundle/Command-T
+	url = https://github.com/wincent/Command-T.git
