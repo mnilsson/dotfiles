@@ -15,8 +15,11 @@ set expandtab
 set list listchars=tab:\ \ ,trail:·
 set smartindent
 
+set wildmenu
 set wildmode=list:longest,list:full
 set wildignore+=.git
+
+let mapleader = ','
 
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader><Leader> :ZoomWin<CR>
