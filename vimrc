@@ -24,5 +24,9 @@ let mapleader = ','
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader><Leader> :ZoomWin<CR>
 
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+set nobackup
+set nowritebackup
+set directory-=.
+
+set laststatus=2
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
