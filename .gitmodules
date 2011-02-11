@@ -16,3 +16,6 @@
 [submodule "dot_vim/bundle/nerdcommenter"]
 	path = dot_vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "dot_vim/bundle/vim-fugitive"]
+	path = dot_vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
