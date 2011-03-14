@@ -24,6 +24,12 @@ let mapleader = ','
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader><Leader> :ZoomWin<CR>
 
+
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+
 set nobackup
 set nowritebackup
 set directory-=.
