@@ -11,4 +11,6 @@ endif
 
 set guioptions-=T
 set guioptions-=lr
-colors railscasts
+
+set background=light
+colorscheme solarized

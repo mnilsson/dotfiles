@@ -37,8 +37,8 @@ set directory-=.
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set statusline+=%=%-14.(%l,%c%V%)\ %P
 
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
+

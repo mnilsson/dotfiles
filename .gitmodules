@@ -22,6 +22,6 @@
 [submodule "dot_vim/bundle/ack.vim"]
 	path = dot_vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "dot_vim/bundle/syntastic"]
-	path = dot_vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
+[submodule "dot_vim/bundle/vim-colors-solarized"]
+	path = dot_vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
