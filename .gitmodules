@@ -1,27 +1,3 @@
-[submodule "dot_vim/bundle/nerdtree"]
-	path = dot_vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "dot_vim/bundle/supertab"]
-	path = dot_vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-[submodule "dot_vim/bundle/vim-rails"]
-	path = dot_vim/bundle/vim-rails
-	url = https://github.com/tpope/vim-rails.git
-[submodule "dot_vim/bundle/snipMate"]
-	path = dot_vim/bundle/snipMate
-	url = https://github.com/vim-scripts/snipMate.git
-[submodule "dot_vim/bundle/Command-T"]
-	path = dot_vim/bundle/Command-T
-	url = https://github.com/wincent/Command-T.git
-[submodule "dot_vim/bundle/nerdcommenter"]
-	path = dot_vim/bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "dot_vim/bundle/vim-fugitive"]
-	path = dot_vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "dot_vim/bundle/ack.vim"]
-	path = dot_vim/bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
-[submodule "dot_vim/bundle/vim-colors-solarized"]
-	path = dot_vim/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "dot_vim/vundle.git"]
+	path = dot_vim/vundle.git
+	url = http://github.com/gmarik/vundle.git

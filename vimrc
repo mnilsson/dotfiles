@@ -1,5 +1,20 @@
-call pathogen#runtime_append_all_bundles()
 set nocompatible
+filetype off "required for vundle
+
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'godlygeek/tabular'
+Bundle 'rails.vim'
+Bundle 'VimOutliner'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'msanders/snipmate.vim'
+Bundle 'ervandew/supertab'
+Bundle 'Markdown'
 
 filetype plugin indent on
 
