@@ -1,5 +1,5 @@
 if has("gui_macvim")
-    set guifont=Menlo:h11
+    set guifont=Inconsolata:h14
     map <D-/> <plug>NERDCommenterToggle
 
     macmenu &File.New\ Tab key=<nop>
