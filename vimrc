@@ -50,7 +50,6 @@ set directory-=.
 
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}
-set statusline+=%#warningmsg#
 set statusline+=%*
 set statusline+=%=%-14.(%l,%c%V%)\ %P
 
