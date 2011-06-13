@@ -36,7 +36,6 @@ set wildignore+=.git
 
 let mapleader = ','
 
-map <Leader>n :NERDTreeToggle<CR>
 map <Leader><Leader> :ZoomWin<CR>
 
 
