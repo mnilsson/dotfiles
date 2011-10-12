@@ -53,6 +53,7 @@ set statusline+=%*
 set statusline+=%=%-14.(%l,%c%V%)\ %P
 
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType c,cpp,h,yacc,*.y setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 
 set mouse=a
 set background=dark
