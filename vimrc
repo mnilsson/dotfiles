@@ -8,13 +8,12 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'godlygeek/tabular'
 Bundle 'rails.vim'
-Bundle 'VimOutliner'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
 Bundle 'Markdown'
+Bundle 'ZoomWin'
 
 filetype plugin indent on
 
