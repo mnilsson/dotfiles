@@ -7,10 +7,10 @@ if has("gui_macvim")
     imap <D-t> <Esc>:CommandT<CR>
 
     set fuopt+=maxhorz
+    colorscheme macvim
 endif
 
 set guioptions-=T
 set guioptions-=lr
 
-set background=light
-colorscheme solarized
+set background=dark
