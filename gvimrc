@@ -11,9 +11,20 @@ if has("gui_macvim")
 
     set fuopt+=maxhorz
     colorscheme macvim
+
+    vmap <D-]> >gv
+    vmap <D-[> <gv
+    nmap <D-]> >>
+    nmap <D-[> <<
+    omap <D-]> >>
+    omap <D-[> <<
+    imap <D-]> <Esc>>>i
+    imap <D-[> <Esc><<i
 endif
 
 set guioptions-=T
 set guioptions-=lr
 
 set background=dark
+
+
