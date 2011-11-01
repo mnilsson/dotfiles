@@ -10,7 +10,7 @@ if has("gui_macvim")
     imap <D-t> <Esc>:CommandT<CR>
 
     set fuopt+=maxhorz
-    colorscheme macvim
+    colorscheme railscasts2
 
     vmap <D-]> >gv
     vmap <D-[> <gv

@@ -14,6 +14,7 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
 Bundle 'Markdown'
 Bundle 'ZoomWin'
+Bundle 'Color-Sampler-Pack'
 
 filetype plugin indent on
 
