@@ -17,8 +17,19 @@ task :make_command_t do
   sh "cd dot_vim/bundle/Command-T && rake make"
 end
 
+desc "Link files not linked elsewhere"
+task :link_files do
+  %w[ tmux.conf ].each do |file|
+    dest = File.expand_path("~/.#{file}")
+    unless File.exist?(dest)
+      ln_s(File.expand_path("#{file}"), dest)
+    end
+  end
+end
+
 
 task :default => [
   :link_vim,
+  :link_files
 ]
 
