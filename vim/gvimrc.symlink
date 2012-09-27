@@ -1,16 +1,17 @@
 if has("gui_macvim")
-    set guifont=Inconsolata:h14
+    set guifont=Menlo\ Regular\ for\ Powerline:h13
 
     map <D-/> <plug>NERDCommenterToggle
     imap <D-/> <Esc><plug>NERDCommenterToggleli
     vmap <D-/> <plug>NERDCommenterTogglegv
 
     macmenu &File.New\ Tab key=<nop>
-    map <D-t> :CommandT<CR>
+    macmenu &File.Open\ Tab\.\.\.<Tab>:tabnew key=<nop>
+    map <D-t> :CommandTFlush<cr>\|:CommandT<CR>
+    map <D-T> :CommandTFlush<cr>\|:CommandT %%<CR>
     imap <D-t> <Esc>:CommandT<CR>
 
     set fuopt+=maxhorz
-    colorscheme railscasts2
 
     vmap <D-]> >gv
     vmap <D-[> <gv
@@ -24,7 +25,5 @@ endif
 
 set guioptions-=T
 set guioptions-=lr
-
-set background=dark
 
 

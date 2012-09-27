@@ -1,35 +1,34 @@
-desc "link vim to ~/.vim"
-task :link_vim do
-  vimdir = File.expand_path("~/.vim")
-  unless File.exist?(vimdir)
-    ln_s(File.expand_path("./dot_vim"), vimdir)
-  end
-  %w[ vimrc gvimrc ].each do |file|
-    dest = File.expand_path("~/.#{file}")
-    unless File.exist?(dest)
-	  ln_s(File.expand_path("../#{file}", __FILE__), dest)
+task :install do
+  linkables = Dir.glob '*/**{.symlink}'
+  skip_all = false
+  overwrite_all = false
+  backup_all = false
+
+  linkables.each do |linkable|
+    overwrite = false
+    backup = false
+
+    file = linkable.split('/').last.split('.symlink').last
+    target = "#{ENV["HOME"]}/.#{file}"
+
+    if File.exists?(target) || File.symlink?(target)
+      unless skip_all || overwrite || backup_all
+        puts "Target exists (#{target}): [s]kip, [S]kip all, [b]ackup, [B]ackup all, [o]verwrite, [O]verwrite all"
+        case STDIN.gets.chomp
+        when 's' then next
+        when 'S' then skip_all = true
+        when 'b' then backup = true
+        when 'B' then backup_all = true
+        when 'o' then overwrite = true
+        when 'O' then overwrite_all = true
+        end
+      end
+      FileUtils.rm_rf(target) if overwrite || overwrite_all
+      `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
     end
+    `ln -s "$PWD/#{linkable}" "#{target}"`
   end
 end
 
-desc "run the installer for the vim plugin CommandT"
-task :make_command_t do
-  sh "cd dot_vim/bundle/Command-T && rake make"
-end
-
-desc "Link files not linked elsewhere"
-task :link_files do
-  %w[ tmux.conf ].each do |file|
-    dest = File.expand_path("~/.#{file}")
-    unless File.exist?(dest)
-      ln_s(File.expand_path("#{file}"), dest)
-    end
-  end
-end
-
-
-task :default => [
-  :link_vim,
-  :link_files
-]
+task :default => 'install'
 
