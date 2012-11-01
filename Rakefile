@@ -12,7 +12,7 @@ task :install do
     target = "#{ENV["HOME"]}/.#{file}"
 
     if File.exists?(target) || File.symlink?(target)
-      unless skip_all || overwrite || backup_all
+      unless skip_all || overwrite_all || backup_all
         puts "Target exists (#{target}): [s]kip, [S]kip all, [b]ackup, [B]ackup all, [o]verwrite, [O]verwrite all"
         case STDIN.gets.chomp
         when 's' then next
