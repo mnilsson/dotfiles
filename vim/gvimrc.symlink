@@ -1,10 +1,6 @@
 if has("gui_macvim")
     set guifont=Menlo\ Regular\ for\ Powerline:h13
 
-    map <D-/> <plug>NERDCommenterToggle
-    imap <D-/> <Esc><plug>NERDCommenterToggleli
-    vmap <D-/> <plug>NERDCommenterTogglegv
-
     macmenu &File.New\ Tab key=<nop>
     macmenu &File.Open\ Tab\.\.\.<Tab>:tabnew key=<nop>
     map <D-t> :CommandTFlush<cr>\|:CommandT<CR>
@@ -26,4 +22,6 @@ endif
 set guioptions-=T
 set guioptions-=lr
 
-
+set background=dark
+hi Normal guibg=black guifg=white
+colorscheme default

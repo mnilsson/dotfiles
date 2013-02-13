@@ -14,19 +14,23 @@ set expandtab
 set list listchars=tab:\▹\ ,trail:·
 set smartindent
 
+set hlsearch
 set wildmenu
 set wildmode=list:longest,list:full
 set wildignore+=.git
 
 let mapleader = ','
 
-map <Leader><Leader> :ZoomWin<CR>
-
 
 map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
+
+function! MapCR()
+  nnoremap <leader><cr> :nohlsearch<cr>
+endfunction
+call MapCR()
 
 set nobackup
 set nowritebackup
@@ -35,43 +39,42 @@ set directory-=.
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}
 set statusline+=%*
-set statusline+=%=%-14.(%l,%c%V%)\ %P
+set statusline+=%=%-14.\(%l,%c%V%)\ %P
 
-autocmd FileType c,cpp,h,yacc,y,l setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+autocmd FileType c,cpp,h,yacc,y,l setlocal tabstop=9 softtabstop=8 shiftwidth=8 noexpandtab
 autocmd FileType php set shiftwidth=4 | set tabstop=4 | set softtabstop=4
-autocmd BufEnter *.phtml set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd BufEnter *.md set filetype=markdown
+autocmd FileType html set shiftwidth=2 tabstop=2 softtabstop=2
 
 
 set t_Co=256
 
 set mouse=a
-colorscheme jellybeans
+colorscheme default
 set background=dark
 
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 
-map <Leader>/ <plug>NERDCommenterToggle
-imap <Leader>/ <Esc><plug>NERDCommenterToggleli
-vmap <Leader>/ <plug>NERDCommenterTogglegv
-
-map <Leader>n :NERDTreeToggle<cr>
-
-map <Leader>rt :TagbarToggle<cr>
-let g:Powerline_symbols = 'fancy'
-
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
-
 set timeout timeoutlen=1000 ttimeoutlen=100
 
-hi CursorLine   cterm=underline ctermbg=NONE
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-
-
 set wildignore+=*/docs/*,*/tmp/*,.DS_Store
+
+
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col -1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-n>"
+  endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
+
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+" set foldcolumn=4
+"
+let g:phpqa_codesniffer_args = "--standard=PSR2"
+let g:phpqa_messdetector_ruleset = "codesize,unusedcode"
