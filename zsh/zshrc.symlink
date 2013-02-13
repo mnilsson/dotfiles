@@ -3,6 +3,7 @@ source $HOME/.zsh/config.zsh
 source $HOME/.zsh/alias.zsh
 source $HOME/.zsh/completion.zsh
 source $HOME/.zsh/prompt.zsh
+source $HOME/.zsh/git.zsh
 
 add_to_path "/Users/markus/.bin"
 add_to_path "/usr/local/bin"
@@ -10,4 +11,10 @@ add_to_path "/usr/local/sbin"
 add_to_path "/opt/local/bin"
 add_to_path "/opt/local/sbin"
 add_to_path "/usr/local/share/npm/bin"
-add_to_path "/usr/local/share/python3"
+add_to_path "/usr/local/share/python"
+add_to_path "/Users/markus/.cabal/bin"
+add_to_path "/Users/markus/.php/vendor/bin"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
