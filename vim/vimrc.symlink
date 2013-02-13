@@ -1,44 +1,5 @@
+call pathogen#infect()
 set nocompatible
-filetype off "required for vundle
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-" Colors
-Bundle 'Color-Sampler-Pack'
-Bundle 'altercation/vim-colors-solarized'
-
-" Langs
-Bundle 'nono/vim-handlebars'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-markdown'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'nono/vim-handlebars'
-Bundle 'rodjek/vim-puppet'
-
-" Tools
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'ervandew/supertab'
-Bundle 'ZoomWin'
-Bundle 'mileszs/ack.vim'
-Bundle 'sjl/gundo.vim'
-Bundle 'tpope/vim-surround'
-
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'majutsushi/tagbar'
-"Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'kien/ctrlp.vim'
-
-Bundle 'jnwhiteh/vim-golang'
 
 filetype plugin indent on
 
