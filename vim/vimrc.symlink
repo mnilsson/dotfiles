@@ -73,8 +73,13 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 " set foldcolumn=4
 "
 let g:phpqa_codesniffer_args = "--standard=PSR2"
 let g:phpqa_messdetector_ruleset = "codesize,unusedcode"
+
+let g:ctrlp_map = '<Leader>f'
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_switch_buffer = 0
+
