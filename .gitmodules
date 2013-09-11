@@ -28,3 +28,6 @@
 [submodule "vim/vim.symlink/bundle/handlebars"]
 	path = vim/vim.symlink/bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "vim/vim.symlink/bundle/Colour-Sampler-Pack"]
+	path = vim/vim.symlink/bundle/Colour-Sampler-Pack
+	url = git://github.com/vim-scripts/Colour-Sampler-Pack.git
