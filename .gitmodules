@@ -31,3 +31,6 @@
 [submodule "vim/vim.symlink/bundle/Colour-Sampler-Pack"]
 	path = vim/vim.symlink/bundle/Colour-Sampler-Pack
 	url = git://github.com/vim-scripts/Colour-Sampler-Pack.git
+[submodule "vim/vim.symlink/bundle/ctrlp.vim"]
+  path = vim/vim.symlink/bundle/ctrlp.vim
+  url = https://github.com/kien/ctrlp.vim.git
