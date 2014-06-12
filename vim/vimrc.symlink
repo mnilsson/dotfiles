@@ -17,7 +17,16 @@ set smartindent
 set hlsearch
 set wildmenu
 set wildmode=list:longest,list:full
-set wildignore+=.git
+
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+
+" Disable archive files
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+
+" Disable temp and backup files
+set wildignore+=*.swp,*~,._*
+set wildignore+=*/tmp/*,*.so,*/vendor/*,docs,*/.sass-cache/*,.DS_Store,*/javascripts/components/*
+set wildignore+=*/node_modules/*
 
 let mapleader = ','
 
