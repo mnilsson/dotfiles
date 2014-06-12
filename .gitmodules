@@ -4,9 +4,6 @@
 [submodule "vim/vim.symlink/bundle/vim-colors-solarized"]
 	path = vim/vim.symlink/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "vim/vim.symlink/bundle/Command-T"]
-	path = vim/vim.symlink/bundle/Command-T
-	url = git://github.com/wincent/Command-T.git
 [submodule "vim/vim.symlink/bundle/vim-javascript"]
 	path = vim/vim.symlink/bundle/vim-javascript
 	url = git://github.com/pangloss/vim-javascript.git
@@ -28,12 +25,60 @@
 [submodule "vim/vim.symlink/bundle/handlebars"]
 	path = vim/vim.symlink/bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "vim/vim.symlink/bundle/ctrlp.vim"]
+	path = vim/vim.symlink/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/vim.symlink/bundle/vim-unimpaired"]
+	path = vim/vim.symlink/bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "vim/vim.symlink/bundle/vim-surround"]
+	path = vim/vim.symlink/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/vim.symlink/bundle/vim-rails"]
+	path = vim/vim.symlink/bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
 [submodule "vim/vim.symlink/bundle/Colour-Sampler-Pack"]
 	path = vim/vim.symlink/bundle/Colour-Sampler-Pack
 	url = git://github.com/vim-scripts/Colour-Sampler-Pack.git
-[submodule "vim/vim.symlink/bundle/ctrlp.vim"]
-  path = vim/vim.symlink/bundle/ctrlp.vim
-  url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/vim.symlink/bundle/vim-haskell"]
+	path = vim/vim.symlink/bundle/vim-haskell
+	url = git://github.com/wlangstroth/vim-haskell.git
+[submodule "vim/vim.symlink/bundle/vdebug"]
+	path = vim/vim.symlink/bundle/vdebug
+	url = git://github.com/joonty/vdebug.git
 [submodule "vim/vim.symlink/bundle/nerdtree"]
 	path = vim/vim.symlink/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/vim.symlink/bundle/vim-ruby"]
+	path = vim/vim.symlink/bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/vim.symlink/bundle/unite.vim"]
+	path = vim/vim.symlink/bundle/unite.vim
+	url = git@github.com:Shougo/unite.vim.git
+[submodule "vim/vim.symlink/bundle/vimproc.vim"]
+	path = vim/vim.symlink/bundle/vimproc.vim
+	url = git@github.com:Shougo/vimproc.vim.git
+[submodule "vim/vim.symlink/bundle/tagbar"]
+	path = vim/vim.symlink/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
+[submodule "vim/vim.symlink/bundle/vim-golang"]
+	path = vim/vim.symlink/bundle/vim-golang
+	url = git@github.com:jnwhiteh/vim-golang.git
+[submodule "vim/vim.symlink/bundle/syntastic"]
+	path = vim/vim.symlink/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/vim.symlink/bundle/vim-orgmode"]
+	path = vim/vim.symlink/bundle/vim-orgmode
+	url = git@github.com:jceb/vim-orgmode.git
+[submodule "vim/vim.symlink/bundle/phpcomplete"]
+	path = vim/vim.symlink/bundle/phpcomplete
+	url = git://github.com/shawncplus/phpcomplete.vim.git
+[submodule "vim/vim.symlink/bundle/supertab"]
+	path = vim/vim.symlink/bundle/supertab
+	url = git@github.com:ervandew/supertab.git
+[submodule "vim/vim.symlink/bundle/hardmode"]
+	path = vim/vim.symlink/bundle/hardmode
+	url = git://github.com/wikitopian/hardmode.git
+[submodule "vim/vim.symlink/bundle/vim-latex"]
+	path = vim/vim.symlink/bundle/vim-latex
+	url = git@github.com:jcf/vim-latex.git
