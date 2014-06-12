@@ -22,6 +22,3 @@ endif
 set guioptions-=T
 set guioptions-=lr
 
-set background=dark
-hi Normal guibg=black guifg=white
-colorscheme default
