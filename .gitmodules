@@ -57,28 +57,28 @@
 	url = git@github.com:Shougo/unite.vim.git
 [submodule "vim/vim.symlink/bundle/vimproc.vim"]
 	path = vim/vim.symlink/bundle/vimproc.vim
-	url = git@github.com:Shougo/vimproc.vim.git
+	url = https://github.com/Shougo/vimproc.vim.git
 [submodule "vim/vim.symlink/bundle/tagbar"]
 	path = vim/vim.symlink/bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
+	url = https://github.com/majutsushi/tagbar.git
 [submodule "vim/vim.symlink/bundle/vim-golang"]
 	path = vim/vim.symlink/bundle/vim-golang
-	url = git@github.com:jnwhiteh/vim-golang.git
+	url = https://github.com/jnwhiteh/vim-golang.git
 [submodule "vim/vim.symlink/bundle/syntastic"]
 	path = vim/vim.symlink/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/vim.symlink/bundle/vim-orgmode"]
 	path = vim/vim.symlink/bundle/vim-orgmode
-	url = git@github.com:jceb/vim-orgmode.git
+	url = https://github.com/jceb/vim-orgmode.git
 [submodule "vim/vim.symlink/bundle/phpcomplete"]
 	path = vim/vim.symlink/bundle/phpcomplete
-	url = git://github.com/shawncplus/phpcomplete.vim.git
+	url = https://github.com/shawncplus/phpcomplete.vim.git
 [submodule "vim/vim.symlink/bundle/supertab"]
 	path = vim/vim.symlink/bundle/supertab
-	url = git@github.com:ervandew/supertab.git
+	url = https://github.com/ervandew/supertab.git
 [submodule "vim/vim.symlink/bundle/hardmode"]
 	path = vim/vim.symlink/bundle/hardmode
-	url = git://github.com/wikitopian/hardmode.git
+	url = https://github.com/wikitopian/hardmode.git
 [submodule "vim/vim.symlink/bundle/vim-latex"]
 	path = vim/vim.symlink/bundle/vim-latex
-	url = git@github.com:jcf/vim-latex.git
+	url = https://github.com/jcf/vim-latex.git
