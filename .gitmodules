@@ -19,9 +19,6 @@
 [submodule "vim/vim.symlink/bundle/vim-objc"]
 	path = vim/vim.symlink/bundle/vim-objc
 	url = git://github.com/b4winckler/vim-objc.git
-[submodule "vim/vim.symlink/bundle/vim-phpqa"]
-	path = vim/vim.symlink/bundle/vim-phpqa
-	url = git://github.com/joonty/vim-phpqa.git
 [submodule "vim/vim.symlink/bundle/handlebars"]
 	path = vim/vim.symlink/bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
@@ -70,9 +67,6 @@
 [submodule "vim/vim.symlink/bundle/vim-orgmode"]
 	path = vim/vim.symlink/bundle/vim-orgmode
 	url = https://github.com/jceb/vim-orgmode.git
-[submodule "vim/vim.symlink/bundle/phpcomplete"]
-	path = vim/vim.symlink/bundle/phpcomplete
-	url = https://github.com/shawncplus/phpcomplete.vim.git
 [submodule "vim/vim.symlink/bundle/supertab"]
 	path = vim/vim.symlink/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
