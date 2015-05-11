@@ -3,13 +3,30 @@
 	email = markus@mnilsson.se
 [alias]
   st = status -sb
+  co = checkout
 
 
-  head = !git l -1
-  h = !git head
-  hp = "!. ~/.githelpers && show_git_head"
-  l = "!. ~/.githelpers && pretty_git_log"
+# Update 
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
 
+  # All changes including untracked
+  save = !git add -A && git commit -m 'SAVEPOINT'
+  # All tracked changes
+  wip = !git add -u && git commit -m "WIP" 
+
+  # Undo last commit
+  undo = reset HEAD~1 --mixed
+
+  # Dangerzone! Deletes ALL changes
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+
+  bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+  bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lgs = log --graph --oneline --decorate --all --name-status
+
+  pull = pull --ff-only
 
 [color]
   status = auto
@@ -20,4 +37,6 @@
   bare = false
   logallrefupdates = true
 [push]
-	default = simple
+	default = current
+[core]
+	autocrlf = input
