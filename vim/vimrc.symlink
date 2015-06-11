@@ -7,7 +7,10 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'Shougo/neocomplete.vim'
+
 call neobundle#end()
+
 
 filetype plugin indent on
 NeoBundleCheck
@@ -30,3 +33,6 @@ set number
 set mouse+=a
 set backspace=indent,eol,start
 
+
+" bindings
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
