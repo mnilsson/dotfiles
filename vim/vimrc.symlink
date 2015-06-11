@@ -10,6 +10,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'scrooloose/syntastic'
 
 call neobundle#end()
 
@@ -52,3 +53,18 @@ if executable('ag')
 
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+
+" Syntasitc
+let g:syntastic_check_on_open=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_aggregate_errors=1
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+
+let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_javascript_checkers=['jshint']
+
+let g:SuperTabDefaultCompletionType = "context"
+
