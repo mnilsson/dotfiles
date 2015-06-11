@@ -8,6 +8,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 
 call neobundle#end()
