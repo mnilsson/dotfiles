@@ -1,0 +1,32 @@
+
+set nocompatible
+
+" Plugins
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+call neobundle#end()
+
+filetype plugin indent on
+NeoBundleCheck
+
+" Usability
+set nobackup
+set nowritebackup
+set directory-=.
+
+set timeout timeoutlen=1000 ttimeoutlen=100
+
+" Fancy
+syntax on
+set t_Co=256
+
+
+
+" Navigation
+set number
+set mouse+=a
+set backspace=indent,eol,start
+
