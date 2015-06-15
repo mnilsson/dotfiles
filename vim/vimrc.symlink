@@ -70,3 +70,14 @@ let g:syntastic_javascript_checkers=['jshint']
 
 let g:SuperTabDefaultCompletionType = "context"
 
+" Statusline
+set laststatus=2
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}
+set statusline+=%*
+set statusline+=%=%-14.\(%l,%c%V%)\ %P
+
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
