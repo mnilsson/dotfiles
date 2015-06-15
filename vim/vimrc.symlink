@@ -11,6 +11,7 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/nerdtree'
 
 call neobundle#end()
 
@@ -40,6 +41,7 @@ set backspace=indent,eol,start
 " bindings
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 let mapleader = "\<space>"
+nnoremap <leader>n :NERDTreeToggle<cr>
 
 " CtrlP
 let g:ctrlp_map = '<Leader>f'
