@@ -7,11 +7,21 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'vim-scripts/Colour-Sampler-Pack'
+NeoBundle 'majutsushi/tagbar'
+
+" Languages
+NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'pangloss/vim-javascript'
 
 call neobundle#end()
 
@@ -30,7 +40,9 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 syntax on
 set t_Co=256
 
+set wildmode=list:longest,list:full
 
+colorscheme vividchalk
 
 " Navigation
 set number
@@ -78,8 +90,16 @@ let g:syntastic_warning_symbol='⚠'
 
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_php_phpcs_args='--standard=/Users/markus/prisjakt/sites/prisjakt/scripts/code_review/PrisjaktStandard -n'
 
 let g:SuperTabDefaultCompletionType = "context"
+
+" tagbar settings
+let g:tagbar_autofocus = 1
+map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+map <Leader>. :TagbarToggle<CR>
+map <Leader>ct :cscope f g <cword><CR>
+
 
 " Statusline
 set laststatus=2
