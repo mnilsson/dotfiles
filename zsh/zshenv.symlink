@@ -21,18 +21,3 @@ function strip_diff_leading_symbols () {
 rule () {
 	printf "%$(tput cols)s\n"|tr " " "─"
 }
-
-function sym () {
-  link_target="$1"
-  link_name="$2"
-  if [[ -d "$link_name" ]]
-  then
-    base_dir="$link_name"
-  else
-    base_dir="$(dirname "$link_name")"
-  fi
-
-  link_target="$(abs2rel "$link_target" "$base_dir")"
-
-  ln -s $link_target $link_name
-}
