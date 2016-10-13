@@ -51,7 +51,7 @@
 	# insanely beautiful diffs
 	# https://github.com/paulirish/dotfiles/commit/6743b907ff586c28cd36e08d1e1c634e2968893e#commitcomment-13349456
 	pager = zsh -lc 'diff-highlight | strip_diff_leading_symbols | less -r' -
-	editor = nvim
+	editor = vim
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f

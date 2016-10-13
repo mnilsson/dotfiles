@@ -8,12 +8,15 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'Shougo/deoplete.vim'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-abolish.git'
 
 NeoBundle 'rking/ag.vim'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
@@ -49,14 +52,15 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 
 " Fancy
 syntax on
-set t_Co=256
 
-set wildmode=list:longest,list:full
 
 colorscheme vividchalk
 
+set wildmode=list:longest,list:full
+
 " Navigation
 set number
+set relativenumber
 set mouse+=a
 set backspace=indent,eol,start
 
@@ -170,5 +174,4 @@ let g:deoplete#enable_at_startup = 1
 
 
 
-tnoremap <Leader><ESC> <C-\><C-n>
 highlight TermCursor ctermfg=red guifg=red
