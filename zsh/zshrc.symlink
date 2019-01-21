@@ -16,15 +16,12 @@ add_to_path "/Users/markus/.npm/bin"
 add_to_path "/usr/local/share/python"
 add_to_path "/Users/markus/.cabal/bin"
 add_to_path "/Users/markus/.php/vendor/bin"
-add_to_path "/Users/markus/.composer/vendor/bin"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+add_to_path "/Users/markus.nilsson/.composer/vendor/bin"
 
 export GOPATH=$HOME/code/go
 
 export PATH=$PATH:$GOPATH/bin
-source /usr/local/opt/chruby/share/chruby/chruby.sh
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
 
 export PATH=$PATH:~/bin
-export DOCKER_HOST=tcp://33.33.33.65:2375
+#export DOCKER_HOST=tcp://33.33.33.65:2375

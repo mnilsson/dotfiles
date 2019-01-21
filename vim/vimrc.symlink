@@ -2,46 +2,42 @@
 set nocompatible
 
 " Plugins
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#begin(expand('~/.vim/bundle/'))
+call plug#begin('~/.vim/plugged')
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'Shougo/neocomplete.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'w0rp/ale'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'mhinz/vim-signify'
 
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-abolish'
 
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-abolish.git'
+Plug 'rking/ag.vim'
+Plug 'vim-scripts/Colour-Sampler-Pack'
+Plug 'majutsushi/tagbar'
 
-NeoBundle 'rking/ag.vim'
-NeoBundle 'vim-scripts/Colour-Sampler-Pack'
-NeoBundle 'majutsushi/tagbar'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-flagship'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-commentary'
 
-NeoBundle 'tpope/vim-dispatch'
-NeoBundle 'tpope/vim-flagship'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'tpope/vim-commentary'
-
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 " Languages
-NeoBundle 'rust-lang/rust.vim'
-NeoBundle 'StanAngeloff/php.vim'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'lambdatoast/elm.vim'
-NeoBundle 'ekalinin/Dockerfile.vim'
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'OmniSharp/Omnisharp-vim'
+Plug 'rust-lang/rust.vim'
+Plug 'StanAngeloff/php.vim'
+Plug 'groenewege/vim-less'
+Plug 'pangloss/vim-javascript'
+Plug 'lambdatoast/elm.vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'elixir-lang/vim-elixir'
 
-call neobundle#end()
-
+call plug#end()
 
 filetype plugin indent on
-NeoBundleCheck
 
 " Usability
 set nobackup
@@ -54,7 +50,7 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 syntax on
 
 
-colorscheme vividchalk
+colorscheme jellybeans
 
 set wildmode=list:longest,list:full
 
@@ -81,6 +77,9 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
+" Display
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list
 " CtrlP
 let g:ctrlp_map = '<Leader>f'
 let g:ctrlp_match_window_reversed = 0
@@ -95,19 +94,19 @@ if executable('ag')
 endif
 
 
-" Syntastic
-let g:syntastic_check_on_open=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_aggregate_errors=1
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
+" " Syntastic
+" let g:syntastic_check_on_open=1
+" let g:syntastic_auto_loc_list=1
+" let g:syntastic_aggregate_errors=1
+" let g:syntastic_always_populate_loc_list=1
+" let g:syntastic_error_symbol='✗'
+" let g:syntastic_warning_symbol='⚠'
 
-let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
-let g:syntastic_javascript_checkers=['jshint']
-if filereadable("phpcs.xml")
-	let g:syntastic_php_phpcs_args='--standard=phpcs.xml -n'
-endif
+" let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+" let g:syntastic_javascript_checkers=['jshint']
+" if filereadable("phpcs.xml")
+" 	let g:syntastic_php_phpcs_args='--standard=phpcs.xml -n'
+" endif
 
 let g:SuperTabDefaultCompletionType = "context"
 
@@ -126,7 +125,7 @@ set statusline+=%=%-14.\(%l,%c%V%)\ %P
 
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 
