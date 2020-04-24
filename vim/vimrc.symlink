@@ -25,7 +25,9 @@ Plug 'tpope/vim-flagship'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Languages
 Plug 'rust-lang/rust.vim'
 Plug 'StanAngeloff/php.vim'
@@ -66,16 +68,16 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 let mapleader = "\<space>"
 nnoremap <leader>n :NERDTreeToggle<cr>
 
-function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col -1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-n>"
-  endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
+" function! InsertTabWrapper()
+"   let col = col('.') - 1
+"   if !col || getline('.')[col -1] !~ '\k'
+"     return "\<tab>"
+"   else
+"     return "\<c-n>"
+"   endif
+" endfunction
+" inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+" inoremap <s-tab> <c-n>
 
 " Display
 set listchars=tab:>-,trail:~,extends:>,precedes:<
@@ -174,3 +176,20 @@ let g:deoplete#enable_at_startup = 1
 
 
 highlight TermCursor ctermfg=red guifg=red
+
+
+
+" coc
+
+inoremap <silent><expr> <TAB>
+	\ pumvisible() ? "\<C-n>" :
+	\ <SID>check_back_space() ? "\<TAB>" :
+	\ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+
+function! s:check_back_space() abort
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1] =~# '\s'
+endfunction
+
