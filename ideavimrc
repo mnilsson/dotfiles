@@ -1,0 +1,20 @@
+set visualbell 0
+
+set surround
+let mapleader = " "
+set backspace=indent,eol,start
+
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+set nu
+set cursorline
+
+
+map gh :action ShowIntentionActions<CR>
+
+map <leader>c :action CommentByLineComment<cr>
+map <leader>u :action ShowUsages<cr>
+
