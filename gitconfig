@@ -1,0 +1,59 @@
+[user]
+	name = Markus Nilsson
+	email = markus@mnilsson.se
+[alias]
+  st = status -sb
+  co = checkout
+
+
+# Update 
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+
+  # All changes including untracked
+  save = !git add -A && git commit -m 'SAVEPOINT'
+  # All tracked changes
+  wip = !git add -u && git commit -m "WIP" 
+
+  # Undo last commit
+  undo = reset HEAD~1 --mixed
+
+  # Dangerzone! Deletes ALL changes
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+
+  bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+  bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+
+
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit 
+  lgs = log --graph --oneline --decorate --all --name-status
+
+  pull = pull --ff-only
+
+[color]
+  status = auto
+  branch = auto
+  interactive = auto
+  repositoryformatversion = 0
+  filemode = true
+  bare = false
+  logallrefupdates = true
+
+[color "diff-highlight"]
+	oldNormal = "red bold"
+	oldHighlight = "red bold 52"
+	newNormal = "green bold"
+	newHighlight = "green bold 22"
+
+[push]
+	default = current
+[core]
+	autocrlf = input
+	excludesfile = /Users/markus/.gitignore_global
+	# insanely beautiful diffs
+	# https://github.com/paulirish/dotfiles/commit/6743b907ff586c28cd36e08d1e1c634e2968893e#commitcomment-13349456
+	# pager = zsh -lc 'diff-highlight | strip_diff_leading_symbols | less -r' -
+	editor = vim
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
