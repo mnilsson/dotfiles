@@ -1,5 +1,6 @@
-LC_CTYPE=en_US.UTF-8
-LC_ALL=en_US.UTF-8
+ LC_CTYPE=en_US.UTF-8
+ LC_ALL=en_US.UTF-8
+
 
 #
 source $HOME/.zsh/functions.zsh
@@ -7,19 +8,17 @@ source $HOME/.zsh/config.zsh
 source $HOME/.zsh/alias.zsh
 source $HOME/.zsh/completion.zsh
 source $HOME/.zsh/git.zsh
+source $HOME/.zsh/docker.zsh
 source $HOME/.zsh/prompt.zsh
-source $HOME/.zsh/plugins.zsh
 
-add_to_path "/Users/markus/.bin"
+for f in $(compaudit);do sudo chmod -R 755 $f;done;
+
 add_to_path "/usr/local/bin"
 add_to_path "/usr/local/sbin"
 add_to_path "/opt/local/bin"
 add_to_path "/opt/local/sbin"
 add_to_path "/usr/local/share/npm/bin"
-add_to_path "/Users/markus/.npm/bin"
 add_to_path "/usr/local/share/python"
-add_to_path "/Users/markus/.cabal/bin"
-add_to_path "/Users/markus/.php/vendor/bin"
 add_to_path "/Users/markus.nilsson/.composer/vendor/bin"
 
 export GOPATH=$HOME/code/go
@@ -28,8 +27,7 @@ export PATH=$PATH:$GOPATH/bin
 #source /usr/local/opt/chruby/share/chruby/chruby.sh
 
 export PATH=$PATH:~/bin
-#export DOCKER_HOST=tcp://33.33.33.65:2375
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home`
 
-
+source $HOME/.cargo/env
 
