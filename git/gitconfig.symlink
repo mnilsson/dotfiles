@@ -47,12 +47,17 @@
 	default = current
 [core]
 	autocrlf = input
-	excludesfile = /Users/markus/.gitignore_global
-	# insanely beautiful diffs
-	# https://github.com/paulirish/dotfiles/commit/6743b907ff586c28cd36e08d1e1c634e2968893e#commitcomment-13349456
-	pager = zsh -lc 'diff-highlight | strip_diff_leading_symbols | less -r' -
+	excludesfile = /Users/markusnilsson/.gitignore_global
 	editor = vim
+[pager]
+	# from https://github.com/paulirish/dotfiles
+	#insanely beautiful diffs ==> npm install -g diff-so-fancy
+	diff = diff-so-fancy | less --tabs=4 -RFX
+	show = diff-so-fancy | less --tabs=4 -RFX
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
+[pull]
+	ff = only
