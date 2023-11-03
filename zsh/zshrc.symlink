@@ -10,6 +10,7 @@ source $HOME/.zsh/completion.zsh
 source $HOME/.zsh/git.zsh
 source $HOME/.zsh/docker.zsh
 source $HOME/.zsh/prompt.zsh
+source $HOME/.zsh/jenv.zsh
 
 for f in $(compaudit);do sudo chmod -R 755 $f;done;
 
