@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+log() {
+    echo "$1"
+}
+
+
+link_files() {
+    log "linking directories in $2"
+    pushd $1 &> /dev/null
+    (
+        configs=`find . -mindepth 1 -maxdepth 1 -type d`
+        for c in $configs; do
+            src=${1%/}/${c#./}
+            dest=${2%/}/${c#./}
+            rm -rf $dest
+            log "    linking: $src $dest"
+            ln -s $src $dest
+        done
+    )
+    popd &> /dev/null
+}
+
+link_file() {
+    rm $2
+    log "    linking $1 to $2"
+    ln -s $1 $2
+}
+
+
+link_files $DOTFILES/home/.config $HOME/.config
+
+link_file $DOTFILES/home/.zsh $HOME/.zsh
+link_file $DOTFILES/home/.zshrc $HOME/.zshrc
+link_file $DOTFILES/home/.zsh_profile $HOME/.zsh_profile
+
+link_file $DOTFILES/home/.zsh_profile $HOME/.zsh_profile
