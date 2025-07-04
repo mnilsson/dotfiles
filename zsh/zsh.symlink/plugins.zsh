@@ -1,6 +1,18 @@
 
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
-source $ZPLUG_HOME/init.zsh
+case "$OSTYPE" in
+    linux*)
+        export ZPLUG_HOME=~/.zplug
+        source /usr/share/zplug/init.zsh
+        ;;
+    darwin*)
+        export ZPLUG_HOME=/opt/homebrew/opt/zplug
+        ;;
+    *)
+        export ZPLUG_HOME=/usr/share/zplug
+        ;;
+esac
+echo $ZPLUG_HOME
+#source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"

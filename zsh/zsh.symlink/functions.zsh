@@ -3,7 +3,7 @@ function put-key () {
 }
 
 function add_to_path () {
-    export PATH="$1:$PATH"
+    export PATH="$PATH:$1"
 }
 
 function strip_diff_leading_symbols () {

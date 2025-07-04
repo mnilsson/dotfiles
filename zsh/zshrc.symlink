@@ -13,21 +13,11 @@ source $HOME/.zsh/prompt.zsh
 source $HOME/.zsh/plugins.zsh
 source $HOME/.zsh/jenv.zsh
 
-for f in $(compaudit);do sudo chmod -R 755 $f;done;
 
-add_to_path "/usr/local/bin"
-add_to_path "/usr/local/sbin"
-add_to_path "/opt/local/bin"
-add_to_path "/opt/local/sbin"
-add_to_path "/usr/local/share/npm/bin"
-add_to_path "/usr/local/share/python"
-add_to_path "/Users/markus.nilsson/.composer/vendor/bin"
+add_to_path $HOME/.local/bin
 
-export GOPATH=$HOME/code/go
 
-export PATH=$PATH:$GOPATH/bin
-#source /usr/local/opt/chruby/share/chruby/chruby.sh
 
-export PATH=$PATH:~/bin
-export JAVA_HOME=`/usr/libexec/java_home`
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

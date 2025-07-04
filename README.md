@@ -1,1 +1,9 @@
-To install run rake
+
+
+# install
+
+exa
+ripgrep
+zplug
+neovim
+zsh
