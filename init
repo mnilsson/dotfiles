@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+
+if [ -z "$DOTFILES"]; then
+    DOTFILES="$(cd -P "$( dirname BASH_SOURCE[0])">/dev/null 2>&1 && pwd)"
+    echo "DOTFILES not set using $DOTFILES"
+fi
+
 log() {
     echo "$1"
 }
@@ -13,7 +19,7 @@ link_files() {
             src=${1%/}/${c#./}
             dest=${2%/}/${c#./}
             rm -rf $dest
-            log "    linking: $src $dest"
+            log "    linking $src $dest"
             ln -s $src $dest
         done
     )
