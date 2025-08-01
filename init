@@ -40,3 +40,5 @@ link_file $DOTFILES/home/.zshrc $HOME/.zshrc
 link_file $DOTFILES/home/.zsh_profile $HOME/.zsh_profile
 
 link_file $DOTFILES/home/.zsh_profile $HOME/.zsh_profile
+
+link_file $DOTFILES/home/.gitconfig $HOME/.gitconfig

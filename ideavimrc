@@ -13,7 +13,7 @@ set nu
 set cursorline
 
 
-map gh :action ShowIntentionActions<CR>
+map <leader>gh :action ShowIntentionActions<CR>
 
 map <leader>c :action CommentByLineComment<cr>
 map <leader>u :action ShowUsages<cr>

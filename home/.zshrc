@@ -10,8 +10,6 @@ source $HOME/.zsh/completion.zsh
 source $HOME/.zsh/git.zsh
 source $HOME/.zsh/docker.zsh
 source $HOME/.zsh/prompt.zsh
-source $HOME/.zsh/plugins.zsh
-source $HOME/.zsh/jenv.zsh
 
 
 add_to_path $HOME/.local/bin
